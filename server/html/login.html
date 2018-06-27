@@ -1,0 +1,65 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <title>வாழ்க்கை கடிகாரம்</title>
+
+    <style>
+        div.container {
+        width: 100%;
+        border: 1px solid gray;
+        }
+
+        header, footer {
+        padding: 1em;
+        color:#7E8F7C ;
+        background-color: #000000;
+        clear: left;
+        text-align: center;
+        }
+
+        article {
+        margin-left: 0px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        font color:"#ffffff"
+        overflow: hidden;
+        }
+    </style>
+
+</head>
+
+
+<body ng-app="">
+<div class="container">
+    <header>
+        <font color="#ffffff">
+
+            <h1>வாழ்க்கை கடிகாரம்</h1>
+            www.Vazhkaikadikaram.co.in
+        </font>
+    </header>
+    <article>
+        <center>
+            <font color="#000000">
+
+                <p><form name="form1" action="/api/funapp/view"  method="POST">
+                <p>Username :<br><input type="text" name="uname" ng-model="uname" required> <br></p>
+                <span ng-show="!uname.length"></span>
+                <p>Password<br> <input type="text" name="pass" ng-model="pass" required><br></p>
+                <span ng-show="!pass.length"></span>
+
+                <p><button type="submit">Login</button></p>
+                </form>
+                </p>
+            </font>
+        </center>
+    </article>
+
+    <footer><font color="#ffffff">
+    </font>
+    </footer>
+
+</div>
+
+</body>
+</html>

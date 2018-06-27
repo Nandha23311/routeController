@@ -1,0 +1,72 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+    <title>வாழ்க்கை கடிகாரம்</title>
+
+    <style>
+        div.container {
+        width: 100%;
+        border: 1px solid gray;
+        }
+
+        header, footer {
+        padding: 1em;
+        color:#7E8F7C ;
+        background-color: #000000;
+        clear: left;
+        text-align: center;
+        }
+
+        article {
+        margin-left: 0px;
+        border-left: 1px solid gray;
+        padding: 1em;
+        font color:"#ffffff"
+        overflow: hidden;
+        }
+    </style>
+
+</head>
+
+
+    <body ng-app="" >
+    <div class="container">
+        <header>
+            <font color="#ffffff">
+            <h1>வாழ்க்கை கடிகாரம்</h1>
+            www.Vazhkaikadikaram.co.in
+            </font>
+        </header>
+        <article>
+            <center>
+                <font color="#000000">
+
+                <p><form name="form1" action="/api/funapp/saveuser"  method="POST">
+                <p>உங்கள் பெயர்<br><input type="text" name="mname" ng-model="mname" required> <br></p>
+                    <span ng-show="!mname.length"></span>
+                <p>உயிர்தோழன் பெயர்<br> <input type="text" name="bfname" ng-model="bfname" required><br></p>
+                    <span ng-show="!bfname.length"></span>
+                <p>உயிர்தோழி பெயர் <br> <input type="text" name="gfname" ng-model="gfname" required ><br></p>
+                    <span ng-show="!gfname.length"></span>
+                <p>காதலன் (அல்ல) காதலி பெயர் <br> <input type="text" name="lname" ng-model="lname" required><br></p>
+                    <span ng-show="!lname.length"></span>
+
+                <p>இவன் (அல்ல) இவள்  போன்று வாழ்க்கைதுனை இருக்க வேண்டும் என்று <br>
+                    நீங்கள் நீனைப்பவரின் பெயர் <br><input type="text" name="fname" ng-model="fname" required></p>
+                <br>
+                    <span ng-show="!fname.length"></span>
+                <p><button type="submit">பதிவுசெய்</button></p>
+                </form>
+                </p>
+                </font>
+            </center>
+        </article>
+
+        <footer><font color="#ffffff">உங்களை பற்றியும் உங்களுடைய வாழ்க்கை எப்படி இருக்கப்போகிறது என்பதை பற்றியும் மற்றும் நீங்கள் குறிப்பிட்ட உங்கள் தோழன்,தோழி மற்றும் காதல் எவ்வளவு தூரம் உங்கள் வாழ்க்கையில் உங்களுடன் வரப்போகிறது என்பதை தெரிந்துக்கொள்ளுங்கள்.......
+        </font>
+        </footer>
+
+    </div>
+
+    </body>
+</html>
