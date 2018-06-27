@@ -61,3 +61,13 @@ exports.PostLoc=function(req,res){
 		res.send("Trip Not Started")
 	}	
 }
+
+exports.PostLoc=function(req,res){	
+	var tripId=req.params.tripId;	
+	Routes.findOne({tripId:tripId},function(err,routeData){
+	if(err){
+		res.send("FindErr",err)
+	}	
+	res.send(routeData)	
+	})
+}
