@@ -4,7 +4,7 @@ var Routes=require('./RoutesModel.js');
 var bodyParser=require("body-parser");
 app.use(bodyParser.json());
 
-app.post('/postloc',function(req,res){
+exports.PostLoc=function(req,res){
 	var reqBody=req.body;
 	console.log("reqBody",reqBody)
 	var tripId=reqBody.tripId;
@@ -54,14 +54,10 @@ app.post('/postloc',function(req,res){
 			
 		}
 		}
-	}else{
+	}
+	});
+	}
+	else{
 		res.send("Trip Not Started")
-	}
-});
-	}
-	
-	
-})
-app.listen(3003,function(){
-	console.log("route app started")
-})
+	}	
+}

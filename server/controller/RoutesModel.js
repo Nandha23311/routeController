@@ -1,7 +1,4 @@
 var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/locationDB');
-
 var Schema = mongoose.Schema;
 
 var route = new Schema({
